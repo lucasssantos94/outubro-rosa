@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto; 
+    padding: 3rem 2%;
+}
+
+header, footer, section {
+    .container {
+        @include flex-element(space-between, center);
+    }
+    @include responsive(tablet) {
+        .container {
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+}
+
+header {
+    @include responsive(tablet) {
+        .container {
+            @include flex-element(space-between, center);
+        }
+    }
+}
+
+

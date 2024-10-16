@@ -1,0 +1,29 @@
+footer {
+    background-color: $dark-pink;
+    color: $light-text;
+    .social-media {
+        @include flex-element($align: center);
+        gap: 2rem;
+        @include responsive(mobile) {
+            gap: 1rem;
+            img {
+                width: 4rem;
+            }
+        }
+       
+    }
+
+    .logo-laco {
+        width: 8rem;
+    }
+    @include responsive(tablet) {
+        .container {
+            flex-direction: column;
+            align-items: start;
+        }
+       .logo-laco {
+        display: none;
+       }
+    }
+
+}

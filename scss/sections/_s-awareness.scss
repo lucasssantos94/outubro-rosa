@@ -1,0 +1,20 @@
+.s-awareness {
+    background-color: $dark-pink;
+    .image {
+        flex: 0 1 38vw;
+    }
+    .description {
+        color: $light-text;
+        flex: 0 1 45vw;
+    }
+    @include responsive(tablet) {
+        .description {
+            flex: 1;
+            text-align: center;
+        }
+        .image {
+            flex: 1;
+        }
+    }
+
+}

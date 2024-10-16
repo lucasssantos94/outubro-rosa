@@ -1,0 +1,87 @@
+.nav {
+    .btn-mobile {
+        display: none;
+    }
+    .menu {
+        @include flex-element($align: center);
+        gap: 4rem;
+        a {
+            color: $light-text;
+            padding: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            &:hover {
+                color: $light-pink;
+                transform: scale(1.1);
+            }
+          
+        }
+    }
+
+}
+@include responsive(laptop) {
+    .nav {           
+        .btn-mobile {
+            display: flex;
+            gap: 1.5rem;
+            padding: .5rem 1rem;
+            border: none;
+            background-color: $light-pink;
+            cursor: pointer;
+            .hamburguer {
+                display: block;
+                width: 2rem;
+                border-top: 2px solid;
+                &::after, &::before {
+                    content: '';
+                    display: block;
+                    width: 2rem;
+                    height: .2rem;
+                    margin-top: .5rem;
+                    background-color: currentColor;
+                    transition: .6s;
+                    position: relative;
+                }
+            }
+            
+        }
+        .menu {
+            display: none;
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 12rem;
+            height: 0;
+            right: 0;
+            background-color: $dark-pink;
+            transition: .6s;
+            z-index: 1000;
+            visibility: hidden;
+            overflow-y: hidden;
+            a {
+                padding: 1rem 0;
+                margin: 0 4rem;
+                border-bottom: 2px solid $light-pink;
+            }
+        }
+       
+        &.active .menu {
+            height: calc(100vh - 12rem);
+            visibility: visible;
+            overflow-y: auto;
+        }
+        &.active .btn-mobile .hamburguer {
+            border-top-color: transparent;
+            &::before {
+                transform: rotate(135deg);
+            }
+            &::after {
+                transform: rotate(-135deg);
+                top: -.7rem;
+            }
+        }
+       
+    }
+
+}

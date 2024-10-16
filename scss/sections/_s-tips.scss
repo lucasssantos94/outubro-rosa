@@ -1,0 +1,15 @@
+.s-tips {
+    background-color: $light-pink;
+    img {
+        flex: 0 1 15vw;
+    }
+    @include responsive(tablet) {
+        .container {
+            flex-direction: row;
+        }
+       img {
+        width: 30vw;
+       }
+    }
+
+}

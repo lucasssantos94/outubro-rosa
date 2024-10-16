@@ -1,0 +1,41 @@
+.animate {
+    opacity: 0;
+    filter: blur(3px);
+    transition: all 1s;
+}
+
+.animate.top-down {
+    transform: translateY(-100%);
+}
+
+.animate.zoom-in {
+    transform: scale(0.5);
+}
+
+.animate.from-left {
+    transform: translateX(-100%);
+}
+
+.animate.from-right {
+    transform: translateX(100%);
+}
+
+// .animate.scroll-top {
+//     animation: scrollTop 1s ease infinite alternate;
+// }
+
+.animate.show {
+    transform: translate(0);
+    opacity: 1;
+    filter: blur(0);
+}
+
+
+@keyframes scrollTop {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(3px);
+    }
+}

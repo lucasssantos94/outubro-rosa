@@ -1,0 +1,20 @@
+.s-about {
+    background-color: $light-pink;
+    .description {
+        width: 100%;
+        flex: 0 1 50vw;    
+    }
+    .image {
+        flex: 0 1 25vw;
+    }
+    @include responsive(tablet) {
+        .description {
+            flex: 1;
+            text-align: center;
+        }
+        .image {
+            flex: 1;
+        }
+    }
+
+}
