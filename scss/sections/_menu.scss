@@ -5,7 +5,7 @@
     .menu {
         @include flex-element($align: center);
         gap: 4rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
         a {
             color: $light-text;
             padding: 1rem;

@@ -20,16 +20,11 @@
     transform: translateX(100%);
 }
 
-// .animate.scroll-top {
-//     animation: scrollTop 1s ease infinite alternate;
-// }
-
 .animate.show {
     transform: translate(0);
     opacity: 1;
     filter: blur(0);
 }
-
 
 @keyframes scrollTop {
     from {
