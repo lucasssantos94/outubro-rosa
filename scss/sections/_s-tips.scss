@@ -11,5 +11,10 @@
         width: 30vw;
        }
     }
+    @include responsive(mobile) {
+        img {
+            width: 40vw;
+        }
+    }
 
 }

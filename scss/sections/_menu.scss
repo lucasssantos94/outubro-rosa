@@ -5,6 +5,7 @@
     .menu {
         @include flex-element($align: center);
         gap: 4rem;
+        text-transform: capitalize;
         a {
             color: $light-text;
             padding: 1rem;
@@ -64,10 +65,13 @@
                 margin: 0 4rem;
                 border-bottom: 2px solid $light-pink;
             }
+            @include responsive(mobile) {
+                top: 14rem;
+            }
         }
        
         &.active .menu {
-            height: calc(100vh - 12rem);
+            height: calc(100% - 12rem);
             visibility: visible;
             overflow-y: auto;
         }

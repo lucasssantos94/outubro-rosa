@@ -54,14 +54,8 @@ const intersectCallback = (entries, observer) => {
       }
     });
   };
-  
-const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0,
-  };
-    
-  const intersectObserver = new IntersectionObserver(intersectCallback, options);
+      
+  const intersectObserver = new IntersectionObserver(intersectCallback);
   
   const animatedElements = document.querySelectorAll(".animate");
   
