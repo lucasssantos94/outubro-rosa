@@ -32,7 +32,6 @@ function handleClickOutside(event) {
   }
 }
 
-
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
@@ -64,8 +63,9 @@ const intersectCallback = (entries, observer) => {
   });
 
   // scroll to top  
-document.addEventListener('scroll', () => {
   const btnToTop = document.querySelector('.to-top');
+
+document.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
 
       btnToTop.classList.add('show');
@@ -74,6 +74,10 @@ document.addEventListener('scroll', () => {
       
       btnToTop.classList.remove('show');
     }
+  });
+
+  btnToTop.addEventListener('click', () => {
+    window.scrollTo(0, 0);
   });
 
 
