@@ -21,7 +21,7 @@
     }
 
 }
-@include responsive(laptop) {
+@include mediaQuerie(lg) {
     .nav {           
         .btn-mobile {
             display: flex;
@@ -65,7 +65,7 @@
                 margin: 0 4rem;
                 border-bottom: 2px solid $light-pink;
             }
-            @include responsive(mobile) {
+            @include mediaQuerie(sm) {
                 top: 14rem;
             }
         }

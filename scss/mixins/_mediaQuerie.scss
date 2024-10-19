@@ -1,0 +1,30 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin mediaQuerie($device) {
+    @if $device == xxl {
+        @media (width > $xxl) {
+            @content;
+        }
+    }@else if $device == xl {
+        @media ( width <= $xl) {
+            @content; 
+        }
+    }
+     @else if $device == lg {
+        @media ( width <= $lg) {
+            @content;
+        }
+    } @else if $device == md {
+        @media (width <= $md) {
+            @content;
+        }
+    } @else if $device == sm {
+        @media (width <= $sm) {
+            @content;
+        }
+    }
+}

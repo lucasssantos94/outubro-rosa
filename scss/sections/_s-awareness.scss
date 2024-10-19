@@ -7,7 +7,7 @@
         color: $light-text;
         flex: 0 1 45vw;
     }
-    @include responsive(tablet) {
+    @include mediaQuerie(lg) {
         .description {
             flex: 1;
             text-align: center;

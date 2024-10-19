@@ -1,15 +1,18 @@
 .container {
     width: 100%;
     max-width: 90vw;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 3rem 2%;
 }
 
-header, footer, section {
+header,
+footer,
+section {
     .container {
         @include flex-element(space-between, center);
     }
-    @include responsive(tablet) {
+
+    @include mediaQuerie(lg) {
         .container {
             flex-direction: column;
             gap: 2rem;
@@ -18,11 +21,9 @@ header, footer, section {
 }
 
 header {
-    @include responsive(tablet) {
+    @include mediaQuerie(lg) {
         .container {
             @include flex-element(space-between, center);
         }
     }
 }
-
-

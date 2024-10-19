@@ -26,5 +26,6 @@ body::-webkit-scrollbar-thumb {
   }
 
 img {
-    width: 100%;
+    max-width: 100%;
+    display: block;
 }

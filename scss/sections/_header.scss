@@ -1,5 +1,3 @@
-
-
 header {
     .container {   
         padding: 1rem 2%;
@@ -7,15 +5,8 @@ header {
     background-color: $dark-pink; 
     .logo {
         @include flex-element($align: center);
-        color: $light-text;
-        @include responsive(mobile) {
-            flex-direction: column;
-            h1 {
-                font-size: 2rem;
-            }
-        }
-    }
-
-    
-  
+        @include mediaQuerie(sm) {
+            @include flex-element($direction: column);        
+        } 
+    }  
 }
