@@ -293,9 +293,9 @@ header .logo {
 .s-tips img {
   flex: 0 1 15vw;
 }
-@media (width <= 576px) {
+@media (width <= 1200px) {
   .s-tips img {
-    width: 38vw;
+    width: 20vw;
   }
 }
 @media (width <= 992px) {
@@ -303,12 +303,12 @@ header .logo {
     flex-direction: row;
   }
   .s-tips .container img {
-    width: 18lvw;
+    width: 30vw;
   }
 }
-@media (width <= 1200px) {
-  .s-tips img {
-    width: 20vw;
+@media (width <= 576px) {
+  .s-tips .container img {
+    width: 28vw;
   }
 }
 

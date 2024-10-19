@@ -3,26 +3,31 @@
     img {
         flex: 0 1 15vw;
     }
-    @include mediaQuerie(sm) {
-        img {
-            width: 38vw;
-        }
-    }
-    @include mediaQuerie(lg) {
-        .container {
-            flex-direction: row;
-            img {
-                width: 18lvw;
-               }
-        }
-       
-    }
+
     @include mediaQuerie(xl) {
         img {
             width: 20vw;
             
         }
     }
+ 
+    @include mediaQuerie(lg) {
+        .container {
+            flex-direction: row;
+            img {
+                width: 30vw;
+               }
+        }       
+    }
+
+    @include mediaQuerie(sm) {
+        .container {
+            img {
+                width: 28vw;
+               }
+        }
+    }
+
   
 
 }
