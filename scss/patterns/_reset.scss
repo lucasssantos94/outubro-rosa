@@ -1,3 +1,5 @@
+@use "colors";
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -16,13 +18,13 @@ html {
 
 body::-webkit-scrollbar {
     width: 12px;
-    background-color: $bg-scroll;           
+    background-color: colors.$bg-scroll;           
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: $dark-pink;    
+    background-color: colors.$dark-pink;    
     border-radius: 2rem;       
-    border: 1px solid $light-text;  
+    border: 1px solid colors.$light-text;  
   }
 
 img {

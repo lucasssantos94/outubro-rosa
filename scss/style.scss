@@ -1,13 +1,4 @@
-@import './partials/colors';
-@import './partials/reset';
-@import './mixins/mixins';
-@import './partials/typografy';
-@import './animations/animations';
-@import './partials/container';
-@import './sections/header';
-@import './sections/menu';
-@import './sections/s-about';
-@import './sections/s-awareness';
-@import './sections/s-tips';
-@import './sections/footer';
-@import './partials/to-top';
+@use './patterns/patterns';
+@use 'mixins/mixins';
+@use 'animations/animations';
+@use './layout/layout';

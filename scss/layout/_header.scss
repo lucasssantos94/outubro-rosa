@@ -1,0 +1,15 @@
+@use "../mixins/mixins" as mixin;
+@use "../patterns/patterns" as pattern;
+
+header {
+    .container {   
+        padding: 1rem 2%;
+     }
+    background-color: pattern.$dark-pink; 
+    .logo {
+        @include mixin.flex-element($align: center);
+        @include mixin.mediaQuerie(sm) {
+            @include mixin.flex-element($direction: column);        
+        } 
+    }  
+}

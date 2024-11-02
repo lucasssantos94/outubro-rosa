@@ -1,19 +1,22 @@
+@use '../mixins/mixins' as mixin;
+@use '../patterns/patterns' as pattern;
+
 .nav {
     .btn-mobile {
         display: none;
     }
     .menu {
-        @include flex-element($align: center);
+        @include mixin.flex-element($align: center);
         gap: 4rem;
         text-transform: uppercase;
         a {
-            color: $light-text;
+            color: pattern.$light-text;
             padding: 1rem;
             text-decoration: none;
             transition: all 0.3s;
             display: block;
             &:hover {
-                color: $light-pink;
+                color: pattern.$light-pink;
                 transform: scale(1.1);
             }
           
@@ -21,14 +24,14 @@
     }
 
 }
-@include mediaQuerie(lg) {
+@include mixin.mediaQuerie(lg) {
     .nav {           
         .btn-mobile {
             display: flex;
             gap: 1.5rem;
             padding: .5rem 1rem;
             border: none;
-            background-color: $light-pink;
+            background-color: pattern.$light-pink;
             cursor: pointer;
             .hamburguer {
                 display: block;
@@ -55,7 +58,7 @@
             top: 12rem;
             height: 0;
             right: 0;
-            background-color: $dark-pink;
+            background-color: pattern.$dark-pink;
             transition: .6s;
             z-index: 1000;
             visibility: hidden;
@@ -63,9 +66,9 @@
             a {
                 padding: 1rem 0;
                 margin: 0 4rem;
-                border-bottom: 2px solid $light-pink;
+                border-bottom: 2px solid pattern.$light-pink;
             }
-            @include mediaQuerie(sm) {
+            @include mixin.mediaQuerie(sm) {
                 top: 14rem;
             }
         }

@@ -1,6 +1,9 @@
+@use "../mixins/mediaQuerie";
+@use "colors";
+
 h1 {
     font-size: 2.8rem;
-    color: $light-text;
+    color: colors.$light-text;
 }
 
 h3 {
@@ -17,9 +20,8 @@ p {
     text-align: start;
 }
 
-@include mediaQuerie(sm) {
-    h1 {
-        
+@include mediaQuerie.mediaQuerie(sm) {
+    h1 {        
         font-size: 2rem;
     }
     li {

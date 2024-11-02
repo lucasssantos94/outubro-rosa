@@ -1,10 +1,13 @@
+@use "../mixins/mixins" as mixin;
+@use "../patterns/patterns" as pattern;
+
 footer {
-    background-color: $dark-pink;
-    color: $light-text;
+    background-color: pattern.$dark-pink;
+    color: pattern.$light-text;
     .social-media {
-        @include flex-element($align: center);
+        @include mixin.flex-element($align: center);
         gap: 2rem;
-        @include mediaQuerie(sm) {
+        @include mixin.mediaQuerie(sm) {
             gap: 1rem;
             img {
                 width: 4rem;
@@ -16,7 +19,7 @@ footer {
     .logo-laco {
         width: 8rem;
     }
-    @include mediaQuerie(lg) {
+    @include mixin.mediaQuerie(lg) {
         .container {
             flex-direction: column;
             align-items: start;

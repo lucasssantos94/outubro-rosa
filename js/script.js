@@ -44,23 +44,34 @@ document.addEventListener('touchstart', handleClickOutside);
 
 
 // animations
+
+
 const intersectCallback = (entries, observer) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle("show", entry.isIntersecting);  
       
       if (entry.isIntersecting) {
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target); 
       }
     });
   };
+
+  const intersectOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: [0, 0.1, 0.25, 0.5, 0.75, 1]
+  };
+  
       
-  const intersectObserver = new IntersectionObserver(intersectCallback);
+  const intersectObserver = new IntersectionObserver(intersectCallback, intersectOptions);
   
   const animatedElements = document.querySelectorAll(".animate");
   
   animatedElements.forEach((element) => {
     intersectObserver.observe(element);
   });
+
+
 
   // scroll to top  
   const btnToTop = document.querySelector('.to-top');

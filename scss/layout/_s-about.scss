@@ -1,14 +1,17 @@
+@use "../mixins/mixins" as mixin;
+@use "../patterns/patterns" as pattern;
+
 .s-about {
-    background-color: $light-pink;
+    background-color: pattern.$light-pink;
     .description {
         width: 100%;
         flex: 0 1 50vw;
-        color: $dark-pink;    
+        color: pattern.$dark-pink;    
     }
     .image {
         flex: 0 1 25vw;
     }
-    @include mediaQuerie(lg) {
+    @include mixin.mediaQuerie(lg) {
         .description {
             flex: 1;
             text-align: center;
