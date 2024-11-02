@@ -14,7 +14,7 @@ Este projeto consiste em uma página web que informa sobre o Outubro Rosa, enfat
 
 ![Sass](https://img.shields.io/badge/Sass-000?style=for-the-badge&logo=sass)
 
-Estilização modular utilizando @import para organizar o código em múltiplos arquivos, facilitando a manutenção. Foram utilizados mixins para aplicar estilos reutilizáveis.
+Estilização modular utilizando @forward e @use para organizar o código em múltiplos arquivos, facilitando a manutenção. Foram utilizados mixins para aplicar estilos reutilizáveis.
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
