@@ -12,26 +12,26 @@
     transform: scale(0.5);
 }
 .animate {
-    opacity: 0; /* Invisível no início */
-    filter: blur(10px); /* Efeito inicial de desfoque, opcional */
-    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease; /* Transição suave */
+    opacity: 0; 
+    filter: blur(10px); /
+    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease; 
 }
 
-/* Animação de entrada da esquerda */
+
 .animate.from-left {
-    transform: translateX(-100%); /* Posiciona fora da tela pela esquerda */
+    transform: translateX(-100%); 
 }
 
-/* Animação de entrada da direita */
+
 .animate.from-right {
-    transform: translateX(100%); /* Posiciona fora da tela pela direita */
+    transform: translateX(100%); 
 }
 
-/* Classe 'show' que o IntersectionObserver adiciona para exibir o elemento */
+
 .animate.show {
-    transform: translateX(0); /* Posição original (elemento volta ao centro) */
-    opacity: 1; /* Torna visível */
-    filter: blur(0); /* Remove o desfoque */
+    transform: translateX(0); 
+    opacity: 1; 
+    filter: blur(0); 
 }
 
 @keyframes scrollTop {
